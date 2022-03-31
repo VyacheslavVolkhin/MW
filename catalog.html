@@ -35,13 +35,23 @@
                 </div>
                 <div class="header-outer-wrap">
                     <div class="header-top-wrap">
-                        <div class="location-wrap">
+                        <div class="location-wrap js-popup-wrap">
                             <div class="elm-ico">
                                 <img src="./img/icons/location.svg" alt="">
                             </div>
                             <div class="location-title">Ваш город:</div>
-                            <div class="location-link">
-                                <a href="" class="btn-action-arrow">Екатеринбург</a>
+                            <div class="location-link js-btn-toggle">
+                                <div class="btn-action-arrow">Екатеринбург</div>
+                            </div>
+                            <div class="location-content-block js-popup-block">
+                                <ul class="location-menu">
+                                    <li><a href="">Москва</a></li>
+                                    <li><a href="">Истра</a></li>
+                                    <li><a href="">Краснодар</a></li>
+                                    <li><a href="">Самара</a></li>
+                                    <li><a href="" class="active">Екатеринбург</a></li>
+                                    <li><a href="">Новосибирск</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="phone-wrap">
@@ -62,8 +72,18 @@
                             <div class="action-wrap action-cloud">
                                 <a href="" class="btn-action-ico ico-cloud"></a>
                             </div>
-                            <div class="action-wrap action-settings">
-                                <a href="" class="btn-action-ico ico-settings"></a>
+                            <div class="action-wrap action-settings js-popup-wrap">
+                                <a href="" class="btn-action-ico ico-settings js-btn-toggle"></a>
+                                <div class="settings-content-block js-popup-block">
+                                    <div class="frm-select">
+                                        <input type="checkbox" id="st01">
+                                        <label for="st01">Отображение скидок</label>
+                                    </div>
+                                    <div class="frm-select">
+                                        <input type="checkbox" id="st02">
+                                        <label for="st02">Отображение цен в евро</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="action-wrap action-login">
                                 <a href="" class="btn-action">Пользователь</a>
@@ -71,6 +91,25 @@
                             <div class="action-wrap action-menu js-popup-wrap js-menu-wrap">
                                 <a href="" class="btn-action-ico ico-menu js-btn-toggle"></a>
                                 <div class="menu-content-block js-popup-block">
+                                    <div class="location-wrap">
+                                        <div class="elm-ico">
+                                            <img src="./img/icons/location.svg" alt="">
+                                        </div>
+                                        <div class="location-title">Ваш город:</div>
+                                        <div class="location-link">
+                                            <div class="btn-action-arrow">Екатеринбург</div>
+                                        </div>
+                                        <div class="location-content-block">
+                                            <ul class="location-menu">
+                                                <li><a href="">Москва</a></li>
+                                                <li><a href="">Истра</a></li>
+                                                <li><a href="">Краснодар</a></li>
+                                                <li><a href="">Самара</a></li>
+                                                <li><a href="" class="active">Екатеринбург</a></li>
+                                                <li><a href="">Новосибирск</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <ul class="menu">
                                         <li>
                                             <a href="" class="btn-menu">О компании</a>
@@ -195,7 +234,7 @@
                         <div class="items-wrap">
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-catalog">
+                                <div class="item-catalog active cat-loader">
                                     <div class="cat-title-wrap">
                                         <div class="cat-photo">
                                             <img src="./img/cat-small01.jpg" alt="">
@@ -216,7 +255,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -229,7 +288,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -243,7 +302,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -256,7 +335,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -270,7 +349,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -283,7 +382,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -319,7 +418,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -332,7 +451,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -346,7 +465,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -359,7 +498,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -373,7 +512,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -386,110 +545,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/item wrap-->
-                            <!--item wrap-->
-                            <div class="item-wrap">
-                                <div class="item-catalog active">
-                                    <div class="cat-title-wrap">
-                                        <div class="cat-photo">
-                                            <img src="./img/cat-small01.jpg" alt="">
-                                        </div>
-                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
-                                    </div>
-                                    <div class="cat-content-title-wrap">
-                                        <div class="cat-content-title title01">Артикул</div>
-                                        <div class="cat-content-title title02">Наименование</div>
-                                        <div class="cat-content-title title03">В наличии</div>
-                                        <div class="cat-content-title title04">Цена</div>
-                                        <div class="cat-content-title title05">Количество</div>
-                                        <div class="cat-content-title title06"></div>
-                                    </div>
-                                    <div class="cat-content-wrap">
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
-                                            </div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
-                                            </div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
-                                            </div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -525,7 +581,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -538,7 +614,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -552,7 +628,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -565,7 +661,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -579,7 +675,27 @@
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
                                             <div class="cat-title-inner title03" data-title="В наличии">
-                                                <div class="link-main">100 шт.</div>
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
@@ -592,7 +708,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -627,7 +743,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -639,7 +777,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -652,7 +790,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -664,7 +824,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -677,7 +837,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -689,7 +871,170 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-catalog">
+                                    <div class="cat-title-wrap">
+                                        <div class="cat-photo">
+                                            <img src="./img/cat-small01.jpg" alt="">
+                                        </div>
+                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
+                                    </div>
+                                    <div class="cat-content-title-wrap">
+                                        <div class="cat-content-title title01">Артикул</div>
+                                        <div class="cat-content-title title02">Наименование</div>
+                                        <div class="cat-content-title title03">В наличии</div>
+                                        <div class="cat-content-title title04">Цена</div>
+                                        <div class="cat-content-title title05">Количество</div>
+                                        <div class="cat-content-title title06"></div>
+                                    </div>
+                                    <div class="cat-content-wrap">
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -727,7 +1072,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -739,7 +1106,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -752,7 +1119,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -764,7 +1153,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -777,7 +1166,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -789,104 +1200,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/item wrap-->
-                            <!--item wrap-->
-                            <div class="item-wrap">
-                                <div class="item-catalog">
-                                    <div class="cat-title-wrap">
-                                        <div class="cat-photo">
-                                            <img src="./img/cat-small01.jpg" alt="">
-                                        </div>
-                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
-                                    </div>
-                                    <div class="cat-content-title-wrap">
-                                        <div class="cat-content-title title01">Артикул</div>
-                                        <div class="cat-content-title title02">Наименование</div>
-                                        <div class="cat-content-title title03">В наличии</div>
-                                        <div class="cat-content-title title04">Цена</div>
-                                        <div class="cat-content-title title05">Количество</div>
-                                        <div class="cat-content-title title06"></div>
-                                    </div>
-                                    <div class="cat-content-wrap">
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -921,7 +1235,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -933,7 +1269,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -946,7 +1282,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -958,7 +1316,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -971,7 +1329,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -983,104 +1363,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/item wrap-->
-                            <!--item wrap-->
-                            <div class="item-wrap">
-                                <div class="item-catalog">
-                                    <div class="cat-title-wrap">
-                                        <div class="cat-photo">
-                                            <img src="./img/cat-small01.jpg" alt="">
-                                        </div>
-                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
-                                    </div>
-                                    <div class="cat-content-title-wrap">
-                                        <div class="cat-content-title title01">Артикул</div>
-                                        <div class="cat-content-title title02">Наименование</div>
-                                        <div class="cat-content-title title03">В наличии</div>
-                                        <div class="cat-content-title title04">Цена</div>
-                                        <div class="cat-content-title title05">Количество</div>
-                                        <div class="cat-content-title title06"></div>
-                                    </div>
-                                    <div class="cat-content-wrap">
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
-                                                    <span class="button-ico">
-                                                        <img src="./img/icons/cart-light.svg" alt="">
-                                                    </span>
-                                                    <span class="button-title">в корзину</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--/inner item-->
-                                        <!--inner item-->
-                                        <div class="cat-content-item">
-                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
-                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
-                                            <div class="cat-title-inner title04" data-title="Цена">
-                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
-                                            </div>
-                                            <div class="cat-title-inner title05" data-title="Количество">
-                                                <div class="frm-field-counter counter-small js-counter">
-                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
-                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
-                                                    <input type="text" class="js-input-counter form-input" value="1">
-                                                </div>
-                                            </div>
-                                            <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -1115,7 +1398,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -1127,7 +1432,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -1140,7 +1445,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -1152,7 +1479,7 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -1165,7 +1492,29 @@
                                         <div class="cat-content-item">
                                             <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
                                             <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
-                                            <div class="cat-title-inner title03" data-title="В наличии"><span class="link-main">100 шт.</span></div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="cat-title-inner title04" data-title="Цена">
                                                 <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
                                             </div>
@@ -1177,7 +1526,333 @@
                                                 </div>
                                             </div>
                                             <div class="cat-title-inner title06" data-title="">
-                                                <a href="" class="btn">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-catalog">
+                                    <div class="cat-title-wrap">
+                                        <div class="cat-photo">
+                                            <img src="./img/cat-small01.jpg" alt="">
+                                        </div>
+                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
+                                    </div>
+                                    <div class="cat-content-title-wrap">
+                                        <div class="cat-content-title title01">Артикул</div>
+                                        <div class="cat-content-title title02">Наименование</div>
+                                        <div class="cat-content-title title03">В наличии</div>
+                                        <div class="cat-content-title title04">Цена</div>
+                                        <div class="cat-content-title title05">Количество</div>
+                                        <div class="cat-content-title title06"></div>
+                                    </div>
+                                    <div class="cat-content-wrap">
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-catalog">
+                                    <div class="cat-title-wrap">
+                                        <div class="cat-photo">
+                                            <img src="./img/cat-small01.jpg" alt="">
+                                        </div>
+                                        <div class="cat-title">Oventrop Краны шаровые c&nbsp;рукояткой «бабочка» (Optibal)</div>
+                                    </div>
+                                    <div class="cat-content-title-wrap">
+                                        <div class="cat-content-title title01">Артикул</div>
+                                        <div class="cat-content-title title02">Наименование</div>
+                                        <div class="cat-content-title title03">В наличии</div>
+                                        <div class="cat-content-title title04">Цена</div>
+                                        <div class="cat-content-title title05">Количество</div>
+                                        <div class="cat-content-title title06"></div>
+                                    </div>
+                                    <div class="cat-content-wrap">
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
+                                                    <span class="button-ico">
+                                                        <img src="./img/icons/cart-light.svg" alt="">
+                                                    </span>
+                                                    <span class="button-title">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--/inner item-->
+                                        <!--inner item-->
+                                        <div class="cat-content-item">
+                                            <div class="cat-title-inner title01" data-title="Артикул">1075804</div>
+                                            <div class="cat-title-inner title02" data-title="Наименование">Кран шаровой, Optibal, DN-15, 1/2", НВ, PN, бар-16, ручка-бабочка, никелированный, с&nbsp;ниппелем и НГ</div>
+                                            <div class="cat-title-inner title03" data-title="В наличии">
+                                                <div class="link-main js-tooltip">
+                                                    100 шт.
+                                                    <div class="tooltip-popup-wrap">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Склад</th>
+                                                                    <th>Наличие</th>
+                                                                    <th>Резерв</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Новосибирск: склад</th>
+                                                                    <th>1</th>
+                                                                    <th>0</th>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title04" data-title="Цена">
+                                                <div class="elm-price" data-unit="₽/ шт.">2 271,34</div>
+                                            </div>
+                                            <div class="cat-title-inner title05" data-title="Количество">
+                                                <div class="frm-field-counter counter-small js-counter">
+                                                    <a href="" class="btn-plus js-button-counter-plus"></a>
+                                                    <a href="" class="btn-minus js-button-counter-minus"></a>
+                                                    <input type="text" class="js-input-counter form-input" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="cat-title-inner title06" data-title="">
+                                                <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                                     <span class="button-ico">
                                                         <img src="./img/icons/cart-light.svg" alt="">
                                                     </span>
@@ -1225,9 +1900,10 @@
                     <!--/side-menu-box-->
 
                     <!--filter-box-->
-                    <div class="filter-box js-popup-wrap">
+                    <form action="/" class="filter-box js-popup-wrap">
                         <a href="" class="btn-filter js-btn-toggle"></a>
                         <div class="filter-content-block js-popup-block">
+                            <a href="" class="btn-action-result">Показать (16)</a>
                             <a href="" class="btn-action-ico ico-close js-btn-close"></a>
                             <div class="filter-sections-wrap">
                                 <!--filter-section-wrap-->
@@ -1358,7 +2034,7 @@
                             </div>
                             <!--/filter-section-submit-->
                         </div>
-                    </div>
+                    </form>
                     <!--/filter-box-->
 
                     <!--side-order-box-->
@@ -1468,6 +2144,47 @@
             </div>
         </footer>
         <!-- /footer -->
+
+        <!--popup-box-->
+        <div class="popup-cart-box js-popup" data-popup="popup-cart-add">
+            <div class="popup-title-wrap">
+                <div class="popup-title">Товар добавлен в корзину</div>
+            </div>
+            <div class="popup-footer-wrap">
+                <div class="popup-action">
+                    <a href="" class="btn">Перейти в корзину</a>
+                </div>
+            </div>
+        </div>
+        <!--/popup-box-->
+
+
+        <div id="popup-login" class="popup-box">
+            <div class="frm-popup">
+                <div class="frm-popup-title h3-title">Вход</div>
+                <div class="frm-popup-wrap">
+                    <div class="frm-row">
+                        <input type="text" class="form-input" placeholder="Логин">
+                    </div>
+                    <div class="frm-row">
+                        <input type="password" class="form-input" placeholder="Пароль">
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-select">
+                            <input type="checkbox" id="popup01">
+                            <label for="popup01">Запомнить меня на этом компьютере</label>
+                        </div>
+                    </div>
+                    <div class="frm-row-submit">
+                        <button type="submit" class="btn">Войти</button>
+                    </div>
+                    <div class="frm-row row-links">
+                        <div class="frm-field"><a href="">Регистрация</a></div>
+                        <div class="frm-field"><a href="">Восстановить пароль</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- /wrap -->

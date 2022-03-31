@@ -184,6 +184,56 @@ html {
         overflow: hidden;
         margin-right: -10px;
     }
+    .action-menu {
+        .location-wrap {
+            display: none;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--clr-red);
+            .elm-ico {
+                margin-left: 20px;
+            }
+            .location-link.active {
+                &~.location-content-block {
+                }
+            }
+            .location-content-block {
+                display: none;
+                width: 100%;
+                margin: 0;
+                max-width: inherit;
+                min-width: 0;
+                animation: fadein ease 0.2s;
+                position: relative;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                box-shadow: none;
+            }
+        }
+    }
+    .action-settings {
+        position: relative;
+        .settings-content-block {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 240px;
+            background: #fff;
+            z-index: 20;
+            padding: 15px;
+            .shadow-main;
+            .frm-select {
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
     .catalog-menu-wrap {
         flex: 1;
         .menu {
@@ -272,6 +322,35 @@ html {
     .location-wrap {
         display: flex;
         align-items: center;
+        position: relative;
+        .location-content-block {
+            width: auto;
+            float: left;
+            min-width: 100%;
+            margin-top: 10px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+            background: #fff;
+            z-index: 10;
+            .shadow-main;
+            padding: 15px 0;
+            a {
+                display: block;
+                position: relative;
+                padding: 10px 20px;
+                color: var(--clr-base);
+                &:hover, &.active {
+                    background: var(--clr-red);
+                    color: #fff;
+                }
+                &.active {
+                    display: none;
+                }
+            }
+        }
         .elm-ico {
             width: 14px;
             height: 20px;
@@ -290,6 +369,16 @@ html {
             flex-shrink: 0;
             font-weight: 600;
             padding-left: 15px;
+            &.active {
+                .btn-action-arrow {
+                    &:before {
+                        .t-rotate(180deg);
+                    }
+                }
+            }
+        }
+        .btn-action-arrow {
+            cursor: pointer;
         }
     }
     .phone-wrap {
@@ -530,6 +619,11 @@ html {
         .actions-wrap {
             padding: 0;
             margin: 0;
+        }
+        .action-menu {
+            .location-wrap {
+                display: flex;
+            }
         }
         .action-cloud {
             display: none;

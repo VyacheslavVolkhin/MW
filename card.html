@@ -35,13 +35,23 @@
                 </div>
                 <div class="header-outer-wrap">
                     <div class="header-top-wrap">
-                        <div class="location-wrap">
+                        <div class="location-wrap js-popup-wrap">
                             <div class="elm-ico">
                                 <img src="./img/icons/location.svg" alt="">
                             </div>
                             <div class="location-title">Ваш город:</div>
-                            <div class="location-link">
-                                <a href="" class="btn-action-arrow">Екатеринбург</a>
+                            <div class="location-link js-btn-toggle">
+                                <div class="btn-action-arrow">Екатеринбург</div>
+                            </div>
+                            <div class="location-content-block js-popup-block">
+                                <ul class="location-menu">
+                                    <li><a href="">Москва</a></li>
+                                    <li><a href="">Истра</a></li>
+                                    <li><a href="">Краснодар</a></li>
+                                    <li><a href="">Самара</a></li>
+                                    <li><a href="" class="active">Екатеринбург</a></li>
+                                    <li><a href="">Новосибирск</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="phone-wrap">
@@ -62,8 +72,18 @@
                             <div class="action-wrap action-cloud">
                                 <a href="" class="btn-action-ico ico-cloud"></a>
                             </div>
-                            <div class="action-wrap action-settings">
-                                <a href="" class="btn-action-ico ico-settings"></a>
+                            <div class="action-wrap action-settings js-popup-wrap">
+                                <a href="" class="btn-action-ico ico-settings js-btn-toggle"></a>
+                                <div class="settings-content-block js-popup-block">
+                                    <div class="frm-select">
+                                        <input type="checkbox" id="st01">
+                                        <label for="st01">Отображение скидок</label>
+                                    </div>
+                                    <div class="frm-select">
+                                        <input type="checkbox" id="st02">
+                                        <label for="st02">Отображение цен в евро</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="action-wrap action-login">
                                 <a href="" class="btn-action">Пользователь</a>
@@ -71,6 +91,25 @@
                             <div class="action-wrap action-menu js-popup-wrap js-menu-wrap">
                                 <a href="" class="btn-action-ico ico-menu js-btn-toggle"></a>
                                 <div class="menu-content-block js-popup-block">
+                                    <div class="location-wrap">
+                                        <div class="elm-ico">
+                                            <img src="./img/icons/location.svg" alt="">
+                                        </div>
+                                        <div class="location-title">Ваш город:</div>
+                                        <div class="location-link">
+                                            <div class="btn-action-arrow">Екатеринбург</div>
+                                        </div>
+                                        <div class="location-content-block">
+                                            <ul class="location-menu">
+                                                <li><a href="">Москва</a></li>
+                                                <li><a href="">Истра</a></li>
+                                                <li><a href="">Краснодар</a></li>
+                                                <li><a href="">Самара</a></li>
+                                                <li><a href="" class="active">Екатеринбург</a></li>
+                                                <li><a href="">Новосибирск</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <ul class="menu">
                                         <li>
                                             <a href="" class="btn-menu">О компании</a>
@@ -197,8 +236,26 @@
                     <div class="info-outer-wrap">
                         <div class="info-wrap">
                             <div class="info-stock">
-                                <div class="elm-stock">
+                                <div class="elm-stock js-tooltip">
                                     <div class="st-title">В наличии: 50 шт.</div>
+                                    <div class="tooltip-popup-wrap">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Склад</th>
+                                                    <th>Наличие</th>
+                                                    <th>Резерв</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Новосибирск: склад</th>
+                                                    <th>1</th>
+                                                    <th>0</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                             <div class="info-title">Арт.: 7659666--</div>
@@ -536,7 +593,7 @@
                                     </div>
                                 </div>
                                 <div class="pr-title title08" data-title="">
-                                    <a href="" class="btn">
+                                    <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                         <span class="button-ico">
                                             <img src="./img/icons/cart-light.svg" alt="">
                                         </span>
@@ -569,7 +626,7 @@
                                     </div>
                                 </div>
                                 <div class="pr-title title08" data-title="">
-                                    <a href="" class="btn">
+                                    <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                         <span class="button-ico">
                                             <img src="./img/icons/cart-light.svg" alt="">
                                         </span>
@@ -602,7 +659,7 @@
                                     </div>
                                 </div>
                                 <div class="pr-title title08" data-title="">
-                                    <a href="" class="btn">
+                                    <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                         <span class="button-ico">
                                             <img src="./img/icons/cart-light.svg" alt="">
                                         </span>
@@ -635,7 +692,7 @@
                                     </div>
                                 </div>
                                 <div class="pr-title title08" data-title="">
-                                    <a href="" class="btn">
+                                    <a href="" class="btn js-popup-show popup-short" data-popup="popup-cart-add">
                                         <span class="button-ico">
                                             <img src="./img/icons/cart-light.svg" alt="">
                                         </span>
@@ -740,6 +797,47 @@
             </div>
         </footer>
         <!-- /footer -->
+
+        <!--popup-box-->
+        <div class="popup-cart-box js-popup" data-popup="popup-cart-add">
+            <div class="popup-title-wrap">
+                <div class="popup-title">Товар добавлен в корзину</div>
+            </div>
+            <div class="popup-footer-wrap">
+                <div class="popup-action">
+                    <a href="" class="btn">Перейти в корзину</a>
+                </div>
+            </div>
+        </div>
+        <!--/popup-box-->
+
+
+        <div id="popup-login" class="popup-box">
+            <div class="frm-popup">
+                <div class="frm-popup-title h3-title">Вход</div>
+                <div class="frm-popup-wrap">
+                    <div class="frm-row">
+                        <input type="text" class="form-input" placeholder="Логин">
+                    </div>
+                    <div class="frm-row">
+                        <input type="password" class="form-input" placeholder="Пароль">
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-select">
+                            <input type="checkbox" id="popup01">
+                            <label for="popup01">Запомнить меня на этом компьютере</label>
+                        </div>
+                    </div>
+                    <div class="frm-row-submit">
+                        <button type="submit" class="btn">Войти</button>
+                    </div>
+                    <div class="frm-row row-links">
+                        <div class="frm-field"><a href="">Регистрация</a></div>
+                        <div class="frm-field"><a href="">Восстановить пароль</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- /wrap -->

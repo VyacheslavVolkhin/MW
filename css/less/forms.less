@@ -167,6 +167,22 @@
         }
     }
 }
+.btn-action-result {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    .shadow-main;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    white-space: nowrap;
+    color: var(--clr-base);
+    &:hover {
+        color: var(--clr-red);
+    }
+}
 .btn-action-toggle {
     display: inline-block;
     vertical-align: middle;
@@ -322,6 +338,41 @@
     }
     &:hover {
         color: var(--clr-red);
+    }
+}
+.frm-popup {
+    margin: 0 auto;
+    .frm-popup-title {
+        text-align: center;
+        font-size: 24px;
+    }
+    .frm-row {
+        margin-bottom: 20px;
+    }
+    .frm-row-submit {
+        text-align: center;
+        justify-content: center;
+    }
+    .row-links {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        .frm-field {
+            display: block;
+            width: auto;
+        }
+        a {
+            color: var(--clr-base);
+            &:hover {
+                color: var(--clr-red);
+            }
+        }
+    }
+    .form-input, .btn {
+        height: 44px;
+    }
+    .btn {
+        min-width: 134px;
     }
 }
 .frm-field-range {
@@ -628,6 +679,18 @@
     .slick-active {
         button {
             background: var(--clr-red);
+        }
+    }
+}
+body {
+    .ui-tooltip {
+        background: var(--clr-base);
+        font-size: 12px;
+        line-height: 14/12;
+        color: #fff;
+        padding: 10px;
+        .tooltip-popup-wrap {
+            display: block;
         }
     }
 }

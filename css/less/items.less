@@ -13,6 +13,22 @@
             display: flex;
         }
     }
+    &.cat-loader {
+        .cat-content-wrap {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 10;
+                background: fade(#fff, 90) url(../img/icons/loader.gif) center no-repeat;
+                background-size: 50px auto;
+            }
+        }
+    }
     .cat-title-wrap {
         transition: all ease 0.2s;
         font-size: 14px;
@@ -93,7 +109,8 @@
     }
     .cat-content-wrap {
         display: none;
-        padding: 1px 0 0px 54px;
+        padding: 1px 0 0 54px;
+        transition: all ease 0.2s;
         position: relative;
         &:before {
             content: "";
@@ -613,13 +630,6 @@
             .cat-title-wrap {
                 font-weight: 600;
             }
-        }
-        &.cat-disabled {
-            /*pointer-events: none;
-            &:after {
-                opacity: 1;
-                display: block;
-            }*/
         }
         .cat-content-title-wrap {
             display: none !important;

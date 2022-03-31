@@ -179,15 +179,69 @@ $(document).ready(function(){
         return false;
     })
     
+    //popup
+    let popupShow;
+    $('.js-popup-show').on('click', function() {
+        clearTimeout(popupShow);
+        let dataPopup = $(this).attr('data-popup');
+        $('.js-popup[data-popup="'+dataPopup+'"]').addClass('active');
+        if ($(this).hasClass('popup-short')) {
+            popupShow = setTimeout(function() {
+                $('.js-popup[data-popup="'+dataPopup+'"]').removeClass('active');
+            }, 5000)
+        }
+        return false;
+    })
+    
+    
+    //tooltip
+    $(document).tooltip({
+        items: ".js-tooltip",
+        content: function() {
+            var element = $( this );
+            if ( element.is( ".js-tooltip" ) ) {
+                return $(this).find('.tooltip-popup-wrap').clone();
+            }
+        }
+    })
+    
+    //header location
+    $('.header .action-menu .location-wrap .location-link').on('click', function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active').next('.location-content-block').slideUp(200);
+        } else {
+            $(this).addClass('active').next('.location-content-block').slideDown(200);
+        }
+        return false;
+    })
+    
+    //filter result
+    let filterResult;
+    let filterResultTop;
+    $('.filter-box .frm-select').on('click', function() {
+        clearTimeout(filterResult);
+        filterResultTop = $(this).offset().top - $('.filter-box').offset().top;
+        $('.filter-box .btn-action-result').css('top', filterResultTop).addClass('active');
+        filterResult = setTimeout(function() {
+            $('.filter-box .btn-action-result').removeClass('active');
+        }, 5000)
+    })
+    
     //catalog
     $('.item-catalog.active .cat-content-wrap').show(0);
-    $('.item-catalog .cat-title-wrap').on('click', function() {
+    $('.catalog-box').each(function() {
+        if ($(this).find('.item-catalog.active').length>0) {
+            $(this).addClass('active');
+        }
+    })
+    $('.catalog-box .item-catalog .cat-title-wrap').on('click', function() {
         if ($(this).parent('.item-catalog').hasClass('active')) {
-            $(this).parent('.item-catalog').removeClass('active').find('.cat-content-wrap').slideUp(200);
+            $(this).parent('.item-catalog').removeClass('active').parents('.catalog-box').removeClass('active');
+            $(this).parent('.item-catalog').find('.cat-content-wrap').slideUp(200);
         } else {
-            $('.catalog-box .item-catalog.active').removeClass('active');
-            $('.catalog-box .item-catalog').addClass('cat-disabled');
-            $(this).parent('.item-catalog').addClass('active').removeClass('cat-disabled').find('.cat-content-wrap').slideDown(200);
+            $(this).parents('.catalog-box').addClass('active').find('.item-catalog.active').removeClass('active').find('.cat-content-wrap').slideUp(200);
+            $(this).parent('.item-catalog').addClass('active');
+            $(this).parent('.item-catalog').find('.cat-content-wrap').slideDown(200);
         }
         return false;
     })

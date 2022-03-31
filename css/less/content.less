@@ -1,6 +1,90 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.popup-box {
+    display: none;
+    &.fancybox-content {
+        width: 400px;
+        padding: 30px 20px;
+    }
+    .fancybox-button.fancybox-close-small {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        &:hover {
+            background: none;
+            &:after, &:before {
+                background: #000;
+            }
+        }
+        &:after, &:before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: #8B949E;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -9px;
+            .t-rotate(45deg);
+            border-radius: 1px;
+            transition: background ease 0.2s;
+        }
+        &:before {
+            .t-rotate(-45deg);
+        }
+        * {
+            display: none;
+        }
+    }
+}
+.fancybox-bg {
+    background: fade(#000, 70);
+}
+.popup-cart-box {
+    width: 240px;
+    z-index: 100;
+    position: fixed;
+    bottom: 10px;
+    right: -260px;
+    background: var(--clr-bg);
+    font-size: 17px;
+    line-height: 21/17;
+    text-align: center;
+    transition: all ease 0.2s;
+    .shadow-main;
+    opacity: 0;
+    &.active {
+        opacity: 1;
+        right: 10px;
+    }
+    .popup-title-wrap {
+        padding: 15px;
+    }
+    .popup-footer-wrap {
+        padding: 15px;
+        .btn {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+    .popup-title {
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .btn-action-ico {
+        &.ico-close {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+        }
+    }
+}
 .catalog-box {
     padding-top: 10px;
     border-top: 1px solid var(--clr-border);
@@ -47,6 +131,18 @@
     border-top: 1px solid var(--clr-red);
     font-size: 15px;
     line-height: 16/15;
+    position: relative;
+    .btn-action-result {
+        position: absolute;
+        top: 100px;
+        left: 100%;
+        display: none;
+        animation: fadein ease 0.2s;
+        margin-left: 15px;
+        &.active {
+            display: block;
+        }
+    }
     .btn-action-ico {
         &.ico-close {
             display: none;
@@ -639,6 +735,38 @@
     	left: auto;right: 100%;
     }
 }
+.tooltip-popup-wrap {
+    display: none;
+    font-size: 12px;
+    line-height: 14/12;
+    color: #fff;
+    table {
+        width: 100%;
+        margin: 0;
+        font-size: 1em;
+        line-height: 14/12;
+        color: #fff;
+        th, td {
+            vertical-align: top;
+            border: none;
+            padding: 5px;
+            font-size: 1em;
+            color: inherit;
+            font-weight: 600;
+            text-align: left;
+            border-bottom: 1px solid #fff;
+        }
+        tbody {
+            tr {
+                &:last-child {
+                    th, td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1023px) {
     .sort-box {
         margin-bottom: 10px;
@@ -654,6 +782,16 @@
         padding: 0;
         height: 0;
         border: none;
+        position: static;
+        .btn-action-result {
+            margin-right: 0;
+            margin-left: 15px;
+            left: auto;
+            right: 100%;
+            &.active {
+                display: none;
+            }
+        }
         .btn-action-ico {
             &.ico-close {
                 display: block;
@@ -662,7 +800,7 @@
         .filter-content-block {
             display: none;
             position: absolute;
-            top: 0px;
+            top: 0;
             right: 10px;
             width: 275px;
             z-index: 20;
@@ -765,6 +903,19 @@
     }
     .main-services-box {
         display: none;
+    }
+    .catalog-box {
+        &.active {
+            .item-catalog {
+                &:not(.active) {
+                    pointer-events: none;
+                    &:after {
+                        opacity: 1;
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
 @media (min-width: 480px) {
