@@ -105,7 +105,7 @@ $(document).ready(function(){
 
     //frm counter   
     $('.js-counter .js-button-counter-minus').on('click', function () {
-        var cnt = $(this).parents('.js-counter').find('.js-input-counter').text();
+        var cnt = $(this).parents('.js-counter').find('.js-input-counter').val();
         cnt = parseInt(cnt);
         if (cnt > 0) {
             $(this).parents('.js-counter').find('.js-input-counter').val(cnt - 1);
@@ -234,14 +234,14 @@ $(document).ready(function(){
             $(this).addClass('active');
         }
     })
-    $('.catalog-box .item-catalog .cat-title-wrap').on('click', function() {
-        if ($(this).parent('.item-catalog').hasClass('active')) {
-            $(this).parent('.item-catalog').removeClass('active').parents('.catalog-box').removeClass('active');
-            $(this).parent('.item-catalog').find('.cat-content-wrap').slideUp(200);
+    $('.catalog-box .item-catalog .cat-title-wrap .btn-action-arr').on('click', function() {
+        if ($(this).parents('.item-catalog').hasClass('active')) {
+            $(this).parents('.item-catalog').removeClass('active').parents('.catalog-box').removeClass('active');
+            $(this).parents('.item-catalog').find('.cat-content-wrap').slideUp(200);
         } else {
             $(this).parents('.catalog-box').addClass('active').find('.item-catalog.active').removeClass('active').find('.cat-content-wrap').slideUp(200);
-            $(this).parent('.item-catalog').addClass('active');
-            $(this).parent('.item-catalog').find('.cat-content-wrap').slideDown(200);
+            $(this).parents('.item-catalog').addClass('active');
+            $(this).parents('.item-catalog').find('.cat-content-wrap').slideDown(200);
         }
         return false;
     })

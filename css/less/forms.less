@@ -167,6 +167,16 @@
         }
     }
 }
+.btn-action-arr {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 44px;
+    height: 44px;
+    background: url(../img/icons/arrow-down.svg) 50% no-repeat;
+    background-size: 26px auto;
+    transition: all ease 0.2s;
+}
 .btn-action-result {
     display: block;
     float: left;
@@ -178,7 +188,7 @@
     line-height: 20px;
     padding: 10px;
     white-space: nowrap;
-    color: var(--clr-base);
+    color: var(--clr-red);
     &:hover {
         color: var(--clr-red);
     }
@@ -599,6 +609,7 @@
             left: 8px;
             margin: -8px 0 0 -8px;
             border: 1px solid var(--clr-border);
+            background-color: #fff;
         }
         &:after {
             content: "";
