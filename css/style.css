@@ -1192,6 +1192,9 @@ body {
   .footer .phone-wrap .elm-ico img {
     width: 100%;
   }
+  .header .catalog-menu-wrap .btn-menu {
+    font-weight: bold;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .header .inner-wrap {
@@ -1292,6 +1295,25 @@ body {
       padding-left: 20px;
       padding-right: 20px;
     }
+  }
+}
+@media (min-width: 1200px) {
+  .header .search-wrap {
+    padding-right: 10px;
+    position: relative;
+  }
+  .header .search-wrap .btn-action-ico.ico-search {
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  .header .search-wrap .search-content-block {
+    display: none;
+    width: 280px;
+    max-width: inherit;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 @media (min-width: 1366px) {
@@ -2575,7 +2597,7 @@ body {
   }
   .item-product-line {
     padding-right: 60px;
-    font-size: 16px;
+    font-size: 15px;
   }
   .item-product-line .pr-title-wrap {
     width: 360px;
@@ -2786,6 +2808,10 @@ body {
 .filter-box .filter-section-wrap {
   border-bottom: 1px solid var(--clr-border);
 }
+.filter-box .filter-section-wrap.section-open .filter-section-title:before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .filter-box .filter-section-wrap:last-child {
   border-bottom: none;
 }
@@ -2972,6 +2998,7 @@ body {
   margin-bottom: 19px;
   padding-left: 140px;
   position: relative;
+  border-top: 1px solid var(--clr-text);
 }
 .products-box .title-outer-wrap .title01 {
   width: 140px;
@@ -3650,6 +3677,12 @@ body {
     display: block;
   }
 }
+@media (max-width: 479px) {
+  .files-box .item-wrap {
+    max-width: inherit;
+    width: 50%;
+  }
+}
 @media (min-width: 480px) {
   .main-brands-box .item-wrap {
     width: 25%;
@@ -3833,12 +3866,19 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .products-box .title-outer-wrap {
     padding-left: 0;
+    padding-top: 19px;
   }
   .products-box .title-outer-wrap .title01 {
     display: none;
   }
 }
 @media (min-width: 1024px) {
+  .products-box .title-outer-wrap {
+    padding-top: 19px;
+  }
+  .products-box .title-outer-wrap .title01 {
+    top: 19px;
+  }
   .catalog-box {
     padding-top: 20px;
   }

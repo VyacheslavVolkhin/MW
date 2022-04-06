@@ -913,6 +913,9 @@ html {
             }
         }
     }
+    .header .catalog-menu-wrap .btn-menu {
+        font-weight: bold;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
     .header {
@@ -1020,6 +1023,27 @@ html {
                     padding-left: 20px;
                     padding-right: 20px;
                 }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .header {
+        .search-wrap {
+            padding-right: 10px;
+            position: relative;
+            .btn-action-ico.ico-search {
+                display: block;
+                margin: 0 0 0 auto;
+            }
+            .search-content-block {
+                display: none;
+                width: 280px;
+                max-width: inherit;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
         }
     }
