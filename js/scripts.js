@@ -261,6 +261,10 @@ $(document).ready(function(){
             prevArrow: false,
             nextArrow: false,
         });
+        $('.main-slider-box .slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            $('.main-slider-box .slick-slide:not(.slick-active) .item-animation').removeClass('item-active');
+            $('.main-slider-box .slick-slide.slick-active .item-animation').addClass('item-active');
+        })
     }
 
 
@@ -392,15 +396,18 @@ $(document).ready(function(){
 $(window).on('load', function () {
     //animation
     var sTop = $(window).scrollTop() + $(window).innerHeight();
-    $('.item-animation').each(function () {
+    $('.item-animation.item-animation-scroll').each(function () {
         if ($(this).offset().top < sTop) {
             $(this).addClass('item-active');
         }
     })
+    $('.item-animation-start').each(function () {
+        $(this).addClass('item-active');
+    })
 
     $(window).scroll(function () {
         var sTop = $(window).scrollTop() + $(window).innerHeight();
-        $('.item-animation').each(function () {
+        $('.item-animation.item-animation-scroll').each(function () {
             if ($(this).offset().top < sTop) {
                 $(this).addClass('item-active')
             }
