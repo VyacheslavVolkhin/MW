@@ -256,7 +256,7 @@ $(document).ready(function(){
             infinite: false,
             autoplay: true,
             autoplaySpeed: 5000,
-            adaptiveHeight: false,
+            adaptiveHeight: true,
             prevArrow: false,
             nextArrow: false,
         });
