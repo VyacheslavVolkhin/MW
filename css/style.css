@@ -3395,7 +3395,6 @@ body {
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 2000px;
 }
 .main-slider-box .sl-wrap,
 .main-actions-box .sl-wrap {
@@ -5559,4 +5558,63 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: 0px 0px;
   width: 1px;
   height: 1px;
+}
+/* ----------------------------------- *\
+			animation
+\* ----------------------------------- */
+.item-animation {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  opacity: 0;
+}
+.item-animation.item-active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.item-aleft {
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
+}
+.item-aright {
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+}
+.item-abottom {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+}
+.item-atop {
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.item-animation-second {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.item-animation-third {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.item-animation-four {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.item-animation-five {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.item-animation-six {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.item-animation-seven {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }

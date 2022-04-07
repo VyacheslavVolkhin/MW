@@ -103,6 +103,7 @@ $(document).ready(function(){
 	})
 
 
+
     //frm counter   
     $('.js-counter .js-button-counter-minus').on('click', function () {
         var cnt = $(this).parents('.js-counter').find('.js-input-counter').val();
@@ -388,3 +389,21 @@ $(document).ready(function(){
 });
 
 
+$(window).on('load', function () {
+    //animation
+    var sTop = $(window).scrollTop() + $(window).innerHeight();
+    $('.item-animation').each(function () {
+        if ($(this).offset().top < sTop) {
+            $(this).addClass('item-active');
+        }
+    })
+
+    $(window).scroll(function () {
+        var sTop = $(window).scrollTop() + $(window).innerHeight();
+        $('.item-animation').each(function () {
+            if ($(this).offset().top < sTop) {
+                $(this).addClass('item-active')
+            }
+        })
+    });
+});
