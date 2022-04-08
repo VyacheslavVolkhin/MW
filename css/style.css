@@ -1404,6 +1404,9 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.item-catalog.cat-loader .cat-content-wrap {
+  min-height: 150px;
+}
 .item-catalog.cat-loader .cat-content-wrap:after {
   content: "";
   display: block;
@@ -3396,6 +3399,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.main-slider-box.arrow-right .ico-arrow,
+.main-actions-box.arrow-right .ico-arrow {
+  left: auto;
+  right: 27px;
+}
+.main-slider-box.arrow-right .ico-arrow-next,
+.main-actions-box.arrow-right .ico-arrow-next {
+  margin: 0;
+}
+.main-slider-box.arrow-right .ico-arrow-prev,
+.main-actions-box.arrow-right .ico-arrow-prev {
+  margin-right: 50px;
+}
+.main-slider-box.no-arrow .slider-wrap .ico-arrow,
+.main-actions-box.no-arrow .slider-wrap .ico-arrow {
+  display: none !important;
+}
 .main-slider-box .sl-wrap,
 .main-actions-box .sl-wrap {
   height: auto;
@@ -3508,6 +3528,16 @@ body {
 .main-slider-box .new-link a:hover:before,
 .main-actions-box .new-link a:hover:before {
   left: 30px;
+}
+.main-slider-box .ico-arrow,
+.main-actions-box .ico-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 27px;
+}
+.main-slider-box .ico-arrow-next,
+.main-actions-box .ico-arrow-next {
+  margin-left: 50px;
 }
 .title-outer-box .action-wrap {
   display: none;
@@ -3632,6 +3662,9 @@ body {
   border-bottom: none;
 }
 @media (max-width: 1023px) {
+  .main-slider-box .ico-arrow {
+    display: none !important;
+  }
   .main-categories-box {
     padding-top: 20px;
     margin-bottom: 24px;
@@ -4572,6 +4605,25 @@ body {
     width: 641px;
     margin: 0 0 0 auto;
   }
+  .main-slider-box .ico-arrow {
+    left: 50%;
+    margin-left: -673px;
+  }
+  .main-slider-box .ico-arrow-next {
+    margin-left: -623px;
+    margin-right: 0;
+  }
+  .main-slider-box.arrow-right .ico-arrow {
+    left: auto;
+    right: 50%;
+    margin: 0 -673px 0 0;
+  }
+  .main-slider-box.arrow-right .ico-arrow-next {
+    margin: 0 -673px 0 0;
+  }
+  .main-slider-box.arrow-right .ico-arrow-prev {
+    margin: 0 -623px 0 0;
+  }
 }
 /* ----------------------------------- *\
 			forms elements styles
@@ -4722,6 +4774,29 @@ body {
 .btn-action-ico.ico-phone:before {
   background-image: url(../img/icons/phone.svg);
   background-size: 30px auto;
+}
+.btn-action-ico.ico-arrow {
+  z-index: 20;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ebeff8;
+}
+.btn-action-ico.ico-arrow:hover {
+  background-color: #fff;
+}
+.btn-action-ico.ico-arrow:before {
+  background-image: url(../img/icons/arrow-att.svg);
+  background-size: 10px auto;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.btn-action-ico.ico-arrow.slick-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.btn-action-ico.ico-arrow-next:before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .btn-action-ico.ico-menu:after,
 .btn-action-ico.ico-menu:before {

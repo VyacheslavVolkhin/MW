@@ -141,6 +141,29 @@
             background-size: 30px auto;
         }
     }
+    &.ico-arrow {
+        z-index: 20;
+        cursor: pointer;
+        border-radius: 50%;
+        background: #ebeff8;
+        &:hover {
+            background-color: #fff;
+        }
+        &:before {
+            background-image: url(../img/icons/arrow-att.svg);
+            background-size: 10px auto;
+            .t-rotate(90deg);
+        }
+        &.slick-disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+    &.ico-arrow-next {
+        &:before {
+            .t-rotate(-90deg);
+        }
+    }
     &.ico-menu {
         &:after, &:before {
             transition: transform ease 0.2s;

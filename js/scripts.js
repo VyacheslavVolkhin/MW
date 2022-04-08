@@ -258,8 +258,8 @@ $(document).ready(function(){
             autoplay: true,
             autoplaySpeed: 5000,
             adaptiveHeight: true,
-            prevArrow: false,
-            nextArrow: false,
+            prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+            nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
         });
         $('.main-slider-box .slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
             $('.main-slider-box .slick-slide:not(.slick-active) .item-animation').removeClass('item-active');
