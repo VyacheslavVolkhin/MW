@@ -294,6 +294,9 @@ html {
             &:hover {
                 .submenu-catalog-wrap {
                     display: block;
+                    //opacity: 1;
+                    //pointer-events: inherit;
+                    //transform: translateY(0);
                 }
             }
             .btn-menu {
@@ -704,13 +707,16 @@ html {
         }
         .submenu-catalog-wrap {
             display: none;
+            //opacity: 0;
+            //pointer-events: none;
+            //transform: translateY(-40px);
             animation: fadeinslide ease 0.8s;
+            transition: all ease 0.8s;
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
             z-index: 20;
-            padding: 40px 0 10px 27px;
             background: var(--clr-bg);
             font-size: 1em;
             line-height: 1;
@@ -731,6 +737,7 @@ html {
         .submenu-sections-wrap {
             display: flex;
             flex-wrap: wrap;
+            padding: 40px 0 10px 27px;
         }
         .submenu-section {
             width: 25%;
@@ -740,15 +747,15 @@ html {
         }
         .submenu-section-menu {
             font-weight: 600;
+            position: relative;
+            overflow: hidden;
             a {
                 padding: 0 0 8px 0;
                 animation: fadeinslide ease 0.3s;
-                &:nth-child(3) {
-                    &~a {
-                        display: none;
-                    }
-                }
             }
+        }
+        .submenu-menu-inner {
+            display: none;
         }
         .submenu-section-more {
             margin: 10px 0 0 0;
@@ -805,13 +812,6 @@ html {
                 }
             }
             &.open {
-                .submenu-section-menu {
-                    a {
-                        &:nth-child(3)~a {
-                            display: block;
-                        }
-                    }
-                }
                 .submenu-section-more {
                     a {
                         &:after {
@@ -851,7 +851,7 @@ html {
     }
 }
 @media (max-width: 1365px) {
-    .catalog-menu-wrap .menu .submenu-catalog-wrap {
+    .catalog-menu-wrap .menu .submenu-sections-wrap {
         padding-left: 15px;
     }
     .header {

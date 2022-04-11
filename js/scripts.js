@@ -251,25 +251,14 @@ $(document).ready(function(){
     //catalog header menu
     $('.catalog-menu-wrap .submenu-section-more a').on('click', function() {
         if ($(this).parents('.submenu-section').hasClass('open')) {
-            $(this).parents('.submenu-section').removeClass('open');
+            $(this).parents('.submenu-section').removeClass('open')
+                .find('.submenu-menu-inner').slideUp(500);
         } else {
-            $(this).parents('.submenu-section').addClass('open');
+            $(this).parents('.submenu-section').addClass('open')
+                .find('.submenu-menu-inner').slideDown(500);
         }
         return false;
     })
-    $('.catalog-menu-wrap .submenu-section-menu').each(function() {
-        if ($(this).find('a').length<4) {
-            $(this).parents('.submenu-section').addClass('no-more');
-        }
-    })
-    /*$('.catalog-menu-wrap .menu-catalog .btn-menu').click(function() {
-        if ($('.submenu-catalog-wrap').hasClass('menu-open')) {
-            $('.submenu-catalog-wrap').removeClass('menu-open'); 
-        } else {
-            $('.submenu-catalog-wrap').addClass('menu-open');
-        }
-        return false;
-    })*/
     
 
     //main-slider-box

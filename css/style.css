@@ -964,12 +964,13 @@ body {
   display: none;
   -webkit-animation: fadeinslide ease 0.8s;
           animation: fadeinslide ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 20;
-  padding: 40px 0 10px 27px;
   background: var(--clr-bg);
   font-size: 1em;
   line-height: 1;
@@ -993,6 +994,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 40px 0 10px 27px;
 }
 .catalog-menu-wrap .menu .submenu-section {
   width: 25%;
@@ -1003,13 +1005,15 @@ body {
 }
 .catalog-menu-wrap .menu .submenu-section-menu {
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
 }
 .catalog-menu-wrap .menu .submenu-section-menu a {
   padding: 0 0 8px 0;
   -webkit-animation: fadeinslide ease 0.3s;
           animation: fadeinslide ease 0.3s;
 }
-.catalog-menu-wrap .menu .submenu-section-menu a:nth-child(3) ~ a {
+.catalog-menu-wrap .menu .submenu-menu-inner {
   display: none;
 }
 .catalog-menu-wrap .menu .submenu-section-more {
@@ -1061,9 +1065,6 @@ body {
 .catalog-menu-wrap .menu .submenu-section.no-more .submenu-section-more {
   display: none;
 }
-.catalog-menu-wrap .menu .submenu-section.open .submenu-section-menu a:nth-child(3) ~ a {
-  display: block;
-}
 .catalog-menu-wrap .menu .submenu-section.open .submenu-section-more a:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1097,7 +1098,7 @@ body {
   width: 100%;
 }
 @media (max-width: 1365px) {
-  .catalog-menu-wrap .menu .submenu-catalog-wrap {
+  .catalog-menu-wrap .menu .submenu-sections-wrap {
     padding-left: 15px;
   }
   .header .logo-wrap {
