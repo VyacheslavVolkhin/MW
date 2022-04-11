@@ -528,6 +528,9 @@ body {
   color: #fff;
   background: var(--clr-red);
 }
+.header .catalog-menu-wrap .menu-catalog:hover .submenu-catalog-wrap {
+  display: block;
+}
 .header .catalog-menu-wrap .menu-catalog .btn-menu {
   padding-left: 50px;
 }
@@ -1365,6 +1368,18 @@ body {
   }
   .header .catalog-menu-wrap .btn-menu {
     font-weight: bold;
+  }
+  .header .catalog-menu-wrap .menu-catalog .btn-menu {
+    overflow: visible;
+  }
+  .header .catalog-menu-wrap .menu-catalog .btn-menu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
   }
   .header .search-content-block {
     top: 128px;

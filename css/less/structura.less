@@ -291,6 +291,11 @@ html {
             }
         }
         .menu-catalog {
+            &:hover {
+                .submenu-catalog-wrap {
+                    display: block;
+                }
+            }
             .btn-menu {
                 padding-left: 50px;
                 &:after {
@@ -1098,6 +1103,20 @@ html {
     }
     .header .catalog-menu-wrap .btn-menu {
         font-weight: bold;
+    }
+    .header .catalog-menu-wrap .menu-catalog {
+        .btn-menu {
+            overflow: visible;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 20px;
+            }
+        }
     }
     .header {
         .search-content-block {

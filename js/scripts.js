@@ -262,14 +262,14 @@ $(document).ready(function(){
             $(this).parents('.submenu-section').addClass('no-more');
         }
     })
-    $('.catalog-menu-wrap .menu-catalog .btn-menu').click(function() {
+    /*$('.catalog-menu-wrap .menu-catalog .btn-menu').click(function() {
         if ($('.submenu-catalog-wrap').hasClass('menu-open')) {
             $('.submenu-catalog-wrap').removeClass('menu-open'); 
         } else {
             $('.submenu-catalog-wrap').addClass('menu-open');
         }
         return false;
-    })
+    })*/
     
 
     //main-slider-box
