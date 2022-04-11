@@ -951,6 +951,131 @@ body {
 .header .logo-title:last-child:before {
   display: none;
 }
+.catalog-menu-wrap .menu {
+  position: static;
+}
+.catalog-menu-wrap .menu > li.menu-catalog {
+  position: static;
+}
+.catalog-menu-wrap .menu .submenu-catalog-wrap {
+  display: none;
+  -webkit-animation: fadeinslide ease 0.8s;
+          animation: fadeinslide ease 0.8s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 40px 0 10px 27px;
+  background: var(--clr-bg);
+  font-size: 1em;
+  line-height: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: calc(100vh - 132px);
+  border-top: 1px solid var(--clr-red);
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+.catalog-menu-wrap .menu .submenu-catalog-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.catalog-menu-wrap .menu .submenu-catalog-wrap.menu-open {
+  display: block;
+}
+.catalog-menu-wrap .menu .submenu-sections-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.catalog-menu-wrap .menu .submenu-section {
+  width: 25%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 0 40px 0 0;
+  margin-bottom: 45px;
+}
+.catalog-menu-wrap .menu .submenu-section-menu {
+  font-weight: 600;
+}
+.catalog-menu-wrap .menu .submenu-section-menu a {
+  padding: 0 0 8px 0;
+  -webkit-animation: fadeinslide ease 0.3s;
+          animation: fadeinslide ease 0.3s;
+}
+.catalog-menu-wrap .menu .submenu-section-menu a:nth-child(3) ~ a {
+  display: none;
+}
+.catalog-menu-wrap .menu .submenu-section-more {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+.catalog-menu-wrap .menu .submenu-section-more a:hover:after {
+  -webkit-filter: none;
+          filter: none;
+}
+.catalog-menu-wrap .menu .submenu-section-more a.open:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.catalog-menu-wrap .menu .submenu-section-more a:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0 8px;
+  background: url(../img/icons/arrow-att.svg) center no-repeat;
+  background-size: 100% auto;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  -webkit-filter: brightness(0) grayscale(1);
+          filter: brightness(0) grayscale(1);
+}
+.catalog-menu-wrap .menu .submenu-section-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.catalog-menu-wrap .menu .submenu-section-title a {
+  padding: 0 0 10px 0;
+}
+.catalog-menu-wrap .menu .submenu-section-title a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--clr-red);
+}
+.catalog-menu-wrap .menu .submenu-section.no-more .submenu-section-more {
+  display: none;
+}
+.catalog-menu-wrap .menu .submenu-section.open .submenu-section-menu a:nth-child(3) ~ a {
+  display: block;
+}
+.catalog-menu-wrap .menu .submenu-section.open .submenu-section-more a:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.catalog-menu-wrap .menu .submenu-section a {
+  display: block;
+  position: relative;
+  color: var(--clr-base);
+  text-decoration: none;
+  font-size: 1em;
+}
+.catalog-menu-wrap .menu .submenu-section a:hover,
+.catalog-menu-wrap .menu .submenu-section a.active {
+  color: var(--clr-red);
+}
 .logo {
   display: block;
   position: relative;
@@ -969,6 +1094,9 @@ body {
   width: 100%;
 }
 @media (max-width: 1365px) {
+  .catalog-menu-wrap .menu .submenu-catalog-wrap {
+    padding-left: 15px;
+  }
   .header .logo-wrap {
     width: 220px;
   }
@@ -976,7 +1104,19 @@ body {
     max-width: calc(100% - 220px);
   }
 }
+@media (max-width: 1199px) {
+  .catalog-menu-wrap .menu .submenu-catalog-wrap {
+    max-height: calc(100vh - 127px);
+  }
+}
 @media (max-width: 1023px) {
+  .catalog-menu-wrap .menu .submenu-catalog-wrap {
+    max-height: calc(100vh - 108px);
+  }
+  .catalog-menu-wrap .menu .submenu-section {
+    padding-right: 24px;
+    width: 33.33%;
+  }
   .header .inner-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1077,6 +1217,10 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .catalog-menu-wrap .menu .submenu-section {
+    padding-right: 15px;
+    width: 50%;
+  }
   .footer .subscribe-wrap {
     position: relative;
   }
@@ -1102,6 +1246,11 @@ body {
     padding-top: 30px;
     padding-left: 26px;
     max-width: calc(100% - 146px);
+  }
+}
+@media (max-width: 479px) {
+  .catalog-menu-wrap .menu .submenu-section {
+    width: 100%;
   }
 }
 @media (min-width: 640px) and (max-width: 767px) {
