@@ -33,7 +33,8 @@
         background-color: var(--clr-bg);
         color: #07102D;
         &:hover {
-            color: #07102D;
+            color: #fff;
+            background-color: var(--clr-red);
         }
     }
     &.button-third {
@@ -111,10 +112,34 @@
             background-size: 18px auto;
         }
     }
+    &.ico-search-att {
+        &:before {
+            background-image: url(../img/icons/search-att.svg);
+            background-size: 18px auto;
+            filter: brightness(0) grayscale(1);
+        }
+        &:hover {
+            &:before {
+                filter: none;
+            }
+        }
+    }
     &.ico-cloud {
         &:before {
             background-image: url(../img/icons/cloud.svg);
             background-size: 40px auto;
+        }
+    }
+    &.ico-cloud-att {
+        &:before {
+            background-image: url(../img/icons/cloud-att.svg);
+            background-size: 40px auto;
+            filter: brightness(0) grayscale(1);
+        }
+        &:hover {
+            &:before {
+                filter: none;
+            }
         }
     }
     &.ico-settings {
@@ -123,10 +148,34 @@
             background-size: 20px auto;
         }
     }
+    &.ico-settings-att {
+        &:before {
+            background-image: url(../img/icons/settings-att.svg);
+            background-size: 20px auto;
+            filter: brightness(0) grayscale(1);
+        }
+        &:hover {
+            &:before {
+                filter: none;
+            }
+        }
+    }
     &.ico-cart {
         &:before {
             background-image: url(../img/icons/cart.svg);
             background-size: 20px auto;
+        }
+    }
+    &.ico-cart-att {
+        &:before {
+            background-image: url(../img/icons/cart-red.svg);
+            background-size: 20px auto;
+            filter: brightness(0) grayscale(1);
+        }
+        &:hover {
+            &:before {
+                filter: none;
+            }
         }
     }
     &.ico-location {
@@ -320,6 +369,11 @@
     padding: 0 38px 0 0;
     color: #fff;
     font-weight: 400;
+    &:hover {
+        &:after {
+            filter: none;
+        }
+    }
     &:after {
         content: "";
         display: block;
@@ -328,8 +382,10 @@
         right: 0;
         width: 40px;
         height: 40px;
-        background: url(../img/icons/cart.svg) center no-repeat;
+        background: url(../img/icons/cart-red.svg) center no-repeat;
         background-size: 22px auto;
+        filter: brightness(0) grayscale(1);
+        transition: filter ease 0.2s;
     }
     &[data-count]:before {
         content: attr(data-count);
@@ -351,6 +407,7 @@
     color: var(--clr-base);
     position: relative;
     padding: 0 17px 0 0;
+    transition: all ease 0.2s;
     &:before {
         content: "";
         display: block;
@@ -525,6 +582,12 @@
             top: 50%;
             left: 50%;
             margin: -1px 0 0 -4px;
+            transition: background ease 0.2s;
+        }
+        &:hover {
+            &:after, &:before {
+                background: var(--clr-red);
+            }
         }
     }
     .btn-plus {
@@ -717,6 +780,9 @@
     }
 }
 body {
+    .js-tooltip {
+        cursor: default;
+    }
     .ui-tooltip {
         background: var(--clr-base);
         font-size: 12px;

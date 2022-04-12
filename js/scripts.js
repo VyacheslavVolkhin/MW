@@ -259,6 +259,15 @@ $(document).ready(function(){
         }
         return false;
     })
+    let delay=800, setTimeoutConst;
+    $('.catalog-menu-wrap .menu-catalog').hover(function() {
+        setTimeoutConst = setTimeout(function() {
+            $('.catalog-menu-wrap .menu-catalog').addClass('menu-open');
+        }, delay);
+    }, function() {
+        clearTimeout(setTimeoutConst);
+        $('.catalog-menu-wrap .menu-catalog').removeClass('menu-open');
+    });
     
 
     //main-slider-box
